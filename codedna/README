@@ -1,0 +1,56 @@
+# 🧬 CodeDNA — Your Coding Fingerprint
+
+An interactive coding activity dashboard built using Python, Pandas, Plotly, and Streamlit.
+
+## About
+
+CodeDNA helps users explore their coding habits by analysing recorded coding sessions.
+
+Users can compare programming languages, review their coding time, and filter visualisations to explore specific activities.
+
+## Features
+
+- Coding activity analysis from CSV data
+- Total and average coding time statistics
+- Interactive daily activity chart
+- Coding time comparison by language
+- Language dropdown filter
+- Automatically updated statistics based on selected sessions
+
+## Technologies
+
+- Python
+- Pandas
+- Plotly
+- Streamlit
+
+## How to Run
+
+1. Clone or download this repository.
+2. Open a terminal in the project folder.
+3. Install the dependencies:
+
+   `python3 -m pip install -r requirements.txt`
+
+4. Launch the dashboard:
+
+   `python3 -m streamlit run app.py`
+
+## What I Learned
+
+- Working with CSV files and Pandas DataFrames
+- Filtering and grouping data
+- Building interactive visualisations
+- Creating web dashboards with Streamlit
+- Connecting user input to data analysis
+
+## Future Improvements
+
+- Save new coding sessions directly from the dashboard
+- Track daily coding streaks
+- Generate personalised learning insights
+- Add achievement badges and progress tracking
+
+## Status
+
+Version 1.0 — Interactive dashboard.
