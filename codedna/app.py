@@ -4,12 +4,7 @@ import streamlit as st
 
 df = pd.read_csv('sessions.csv')
 
-fig = px.bar(
-    df,
-    x='minutes',
-    y='day',
-    title='My coding Activity'
-)
+
 
 st.title("🧬 CodeDNA")
 st.write("Discover your coding fingerprint!")
@@ -25,6 +20,9 @@ selected_language = st.selectbox(
     ['Python', 'JavaScript']
 )
 filtered_df = df[df['language'] == selected_language]
+
+total_filtered = filtered_df['minutes'].sum()
+st.metric('total filtered:', total_filtered)
 
 fig = px.bar(
     filtered_df,
