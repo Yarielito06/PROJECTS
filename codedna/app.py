@@ -20,9 +20,14 @@ language_totals = df.groupby('language')['minutes'].sum().reset_index()
 
 st.metric('Total Coding Time', total_minutes)
 st.metric('Average Time', average_length)
+selected_language = st.selectbox(
+    'choose a language',
+    ['Python', 'JavaScript']
+)
+filtered_df = df[df['language'] == selected_language]
 
 fig = px.bar(
-    df,
+    filtered_df,
     x='minutes',
     y='day',
     title='My coding Activity'
@@ -34,5 +39,7 @@ fig_two = px.bar(
     title='Total of Languages'
 )
 
+
+st.write('You selected:', selected_language)
 st.plotly_chart(fig)
 st.plotly_chart(fig_two)
